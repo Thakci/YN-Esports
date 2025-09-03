@@ -6,3 +6,5 @@ Rly, all we do here is just relax, play some
 games, and share stuff.
 
 This project is not affiliated with, endorsed by, or associated with Valve Corporation.
+
+Feel free to use, modify, and contribute to this project under the terms of the MIT License.
