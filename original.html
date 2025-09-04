@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>YN Esports CS:S Stream</title>
+  <meta name="description" content="Live CS:S Stream · YN Esports · Dammam, Saudi Arabia" />
+  <meta property="og:title" content="YN Esports · CS:S Stream" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
   <link rel="stylesheet" href="style.css">
   <script>
     function updateTime() {
@@ -16,16 +21,25 @@
   </script>
 </head>
 <body>
-  <h1>YN Esports CS:S Stream</h1>
-
-  <div id="local-time"></div>
-
-  <iframe src="https://player.kick.com/thakci" height="720" width="1280" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
-
-  <footer>
-    Powered by SourceTV • CS:S Server Live BETA • Project done by Thakc1
-  </footer>
+  <div class="wrap">
+    <section class="hero">
+      <h1>YN Esports CS:S Stream</h1>
+      <div class="subtitle">Live stream powered by SourceTV · Dammam, Saudi Arabia</div>
+      <div id="local-time" class="local-time"></div>
+    </section>
+    <div class="panel">
+      <iframe class="stream-frame"
+        src="https://player.kick.com/thakci"
+        height="720"
+        width="1280"
+        frameborder="0"
+        scrolling="no"
+        allowfullscreen="true"
+        title="YN Esports Live Stream"></iframe>
+    </div>
+    <footer>
+      Powered by SourceTV • CS:S Server Live BETA • Project done by Thakc1
+    </footer>
+  </div>
 </body>
-
 </html>
-
