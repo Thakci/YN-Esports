@@ -1,0 +1,177 @@
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <section class="panel" id="story" style="margin-top:28px">
+      <h2>How this started</h2>
+      <p>
+        Hello, and welcome to YN Esports!<br>
+        This project was started by me and my friends when we wanted some professional feel on Counter Strike.<br>
+        Really, all we do here is just relax, play some games, and share stuff!
+      </p>
+    </section>
+
+    <section class="hero">
+      <div class="badge" aria-label="Beta status">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2L2 7l10 5 10-5-10-5Zm0 15L2 12v5l10 5 10-5v-5l-10 5Z" fill="currentColor"/>
+        </svg>
+        <span>Private Beta 1.0</span>
+      </div>
+      <div>
+        <h1>YN Esports — Counter‑Strike: Source Server</h1>
+        <p class="subtitle">Started on <strong>1 JAN 2025</strong>. Built by <strong>Thakc1</strong>.</p>
+      <div class="status" aria-live="polite">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Server status: <strong>Private beta</strong> — request access below.</span>
+      </div>
+    </section>
+
+    <ul class="list">
+      <li class="item">
+        <div class="kv">
+          <div class="key">Name</div>
+          <div class="val"><strong>YN Esports</strong></div>
+        </div>
+      </li>
+      <li class="item">
+        <div class="kv">
+          <div class="key">Owner</div>
+          <div class="val">Thakc1</div>
+        </div>
+      </li>
+      <li class="item">
+        <div class="kv">
+          <div class="key">Steam</div>
+          <div class="val"><a href="https://www.steamcommunity.com/id/Thakci" target="_blank" rel="noopener">steamcommunity.com/id/Thakci</a></div>
+        </div>
+      </li>
+      <li class="item">
+        <div class="kv">
+          <div class="key">Started</div>
+          <div class="val">1 JAN 2025</div>
+        </div>
+      </li>
+      <li class="item">
+        <div class="kv">
+          <div class="key">Server Phase</div>
+          <div class="val"><span class="pill beta">Private Beta 1.0</span></div>
+        </div>
+      </li>
+    </ul>
+
+    <section class="panel" style="margin-top:28px; text-align:center">
+      <a href="original.html" class="btn brand" style="display:inline-block; width:100%; max-width:300px; padding:20px; font-size:18px; border-radius:var(--radius); box-shadow:var(--shadow); background: linear-gradient(180deg, #0ea5e9, #0284c7); color: white;">
+        🔗 Go to Live KICK stream
+      </a>
+      </section>
+      <section class="panel" style="margin-top:28px">
+      <h2>Rules</h2>
+      <ul class="list">
+        <li class="item">No exploiting</li>
+        <li class="item">No cheating</li>
+        <li class="item">No hacking</li>
+        <li class="item">Don't be a feminist</li>
+        <li class="item">No Israelis</li>
+        <li class="item">No Apple users</li>
+      </ul>
+    </section>
+
+  <section class="panel contact-panel" id="contact" aria-labelledby="contact-heading" style="margin-top:28px">
+      <h2 id="contact-heading">Contact</h2>
+      <ul class="list">
+        <li class="item">
+          <div class="kv">
+            <div class="key">Email</div>
+            <div class="val">
+              <a href="mailto:gabermalek2@gmail.com">gabermalek2@gmail.com</a>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="kv">
+            <div class="key">Steam Profiles</div>
+            <div class="val">
+              <a href="https://steamcommunity.com/id/Thakci/" target="_blank" rel="noopener">Thakc1</a> &nbsp;|&nbsp;
+              <a href="https://steamcommunity.com/profiles/76561198062344715" target="_blank" rel="noopener">AmoS</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="panel" id="feedback" aria-labelledby="feedback-heading" style="margin-top:28px; position:relative;">
+      <h2 id="feedback-heading">Support our servers by giving <b>FeedBack!</b></h2>
+      <form id="feedbackForm" autocomplete="off" style="max-width:400px;margin:auto;">
+        <label for="feedbackEmail" style="display:block;margin-bottom:8px;">Your email:</label>
+        <input type="email" id="feedbackEmail" name="email" required style="width:100%;padding:8px;margin-bottom:12px;border-radius:4px;border:1px solid #ccc;">
+        <label for="feedbackMsg" style="display:block;margin-bottom:8px;">Your feedback:</label>
+        <textarea id="feedbackMsg" name="feedback" required rows="4" style="width:100%;padding:8px;margin-bottom:12px;border-radius:4px;border:1px solid #ccc;"></textarea>
+        <button type="submit" class="btn brand" style="width:100%; position:relative; z-index:1;">Send Feedback</button>
+        <div id="feedbackThanks" style="display:none;color:green;margin-top:12px;">Thank you for your feedback!</div>
+      </form>
+      <div id="confetti-container" style="pointer-events:none; position:absolute; left:0; top:0; width:100%; height:100%; z-index:10;"></div>
+    </section>
+
+    <footer class="footer">
+      <div class="pill">© <span id="year"></span> YN Esports</div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('suggestForm')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const suggestion = document.getElementById('suggestion').value;
+      if (email) {
+        window.location.href = `mailto:gabermalek2@gmail.com?subject=New Mod Suggestion&body=From: ${email}%0D%0A%0D%0ASuggestion:%0D%0A${encodeURIComponent(suggestion)}`;
+        document.getElementById('thanks').style.display = 'block';
+        for (let i = 0; i < 30; i++) {
+          const piece = document.createElement('div');
+          piece.className = 'confetti-piece';
+          piece.style.left = Math.random() * 100 + 'vw';
+          piece.style.backgroundColor = `hsl(${Math.random() * 360},100%,50%)`;
+          document.body.appendChild(piece);
+          setTimeout(() => piece.remove(), 3000);
+        }
+      }
+    });
+
+    // Feedback form handler (mailto) with confetti emoji sprinkle
+    const feedbackForm = document.getElementById('feedbackForm');
+    const confettiContainer = document.getElementById('confetti-container');
+    function sprinkleConfetti() {
+      if (!confettiContainer) return;
+      const emojis = ['🎉','✨','🎊','🥳','💥','🎈','🪅'];
+      for (let i = 0; i < 30; i++) {
+        const conf = document.createElement('span');
+        conf.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+        conf.style.position = 'absolute';
+        conf.style.left = Math.random() * 90 + '%';
+        conf.style.top = '-10px';
+        conf.style.fontSize = (18 + Math.random()*18) + 'px';
+        conf.style.opacity = 0.85;
+        conf.style.transition = 'transform 1.2s cubic-bezier(.23,1.02,.64,1), opacity 1.2s';
+        confettiContainer.appendChild(conf);
+        setTimeout(() => {
+          conf.style.transform = `translateY(${120 + Math.random()*60}px) rotate(${Math.random()*360}deg)`;
+          conf.style.opacity = 0;
+        }, 10);
+        setTimeout(() => conf.remove(), 1400);
+      }
+    }
+    if (feedbackForm) {
+      feedbackForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = document.getElementById('feedbackEmail').value;
+        const feedback = document.getElementById('feedbackMsg').value;
+        const mailto = `mailto:gabermalek2@gmail.com?subject=YN Esports Feedback&body=From: ${encodeURIComponent(email)}%0D%0A%0D%0AFeedback:%0D%0A${encodeURIComponent(feedback)}`;
+        window.location.href = mailto;
+        document.getElementById('feedbackThanks').style.display = 'block';
+        feedbackForm.reset();
+        sprinkleConfetti();
+      });
+    }
+  </script>
+</body>
+</html>

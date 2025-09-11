@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YN Esports CS:S Stream</title>
+  <meta name="description" content="Live CS:S Stream · YN Esports · Dammam, Saudi Arabia" />
+  <meta property="og:title" content="YN Esports · CS:S Stream" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function updateTime() {
+      const now = new Date();
+      const options = { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Asia/Riyadh' };
+      const timeString = new Intl.DateTimeFormat('en-GB', options).format(now);
+      document.getElementById('local-time').textContent = `Local time | ${timeString} | Dammam, Saudi Arabia`;
+    }
+    setInterval(updateTime, 1000);
+    window.onload = updateTime;
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>YN Esports CS:S Stream</h1>
+      <div class="subtitle">Live stream powered by SourceTV · Dammam, Saudi Arabia</div>
+      <div id="local-time" class="local-time"></div>
+    </section>
+    <div class="panel">
+      <iframe class="stream-frame"
+        src="https://player.kick.com/thakci"
+        height="720"
+        width="1280"
+        frameborder="0"
+        scrolling="no"
+        allowfullscreen="true"
+        title="YN Esports Live Stream"></iframe>
+    </div>
+    <footer>
+      Powered by SourceTV • CS:S Server Live BETA • Project done by Thakc1
+    </footer>
+  </div>
+</body>
+</html>
